@@ -1,0 +1,15 @@
+C:\tl2-tp1-2023-vaninaze\bin\Debug\net7.0\tl2-tp1-2023-vaninaze.exe
+C:\tl2-tp1-2023-vaninaze\bin\Debug\net7.0\tl2-tp1-2023-vaninaze.deps.json
+C:\tl2-tp1-2023-vaninaze\bin\Debug\net7.0\tl2-tp1-2023-vaninaze.runtimeconfig.json
+C:\tl2-tp1-2023-vaninaze\bin\Debug\net7.0\tl2-tp1-2023-vaninaze.dll
+C:\tl2-tp1-2023-vaninaze\bin\Debug\net7.0\tl2-tp1-2023-vaninaze.pdb
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.csproj.AssemblyReference.cache
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.GeneratedMSBuildEditorConfig.editorconfig
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.AssemblyInfoInputs.cache
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.AssemblyInfo.cs
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.csproj.CoreCompileInputs.cache
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.dll
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\refint\tl2-tp1-2023-vaninaze.dll
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.pdb
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\tl2-tp1-2023-vaninaze.genruntimeconfig.cache
+C:\tl2-tp1-2023-vaninaze\obj\Debug\net7.0\ref\tl2-tp1-2023-vaninaze.dll
