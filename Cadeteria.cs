@@ -24,6 +24,9 @@ public class Cadeteria
         Cadete cad = new Cadete(id, nombre, dir, telef);
         ListaCadete.Add(cad);
     }
+    public void agregarCadete(Cadete cad){
+        ListaCadete.Add(cad);
+    }
     public void MostrarCadeteria(){
         Console.WriteLine("Nombre: "+ this.nombre);
         Console.WriteLine("Telefono: "+ this.telefono);

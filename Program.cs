@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using EspacioPedido;
-
+using EspacioDatos;
 Console.WriteLine("SELECCIONE UN TIPO DE ACCESO A DATOS: ");
 Console.WriteLine(" 1- CSV");
 Console.WriteLine(" 2- JSON");
@@ -10,12 +10,13 @@ if(int.TryParse(Console.ReadLine(), out opcion)){
     switch (opcion)
     {
         case 1:
-            CargarCSV csv = new();
-            csv.cargarCadeteriaCSV();
+            AccesoCSV csv = new();
+            cadeteria = csv.cargarCadeteriaCSV();
             break;
-       /* case 2:
-            cadeteria.cargarCadeteriaJSON();
-            break;*/
+        case 2:
+            AccesoJSON json = new();
+            cadeteria = json.cargarCadeteriaJSON();
+            break;
     }
 }
 cadeteria.crearPedido(1, "sin cebolla", "Mar", "Junin 231", "32413", "porton verde");
