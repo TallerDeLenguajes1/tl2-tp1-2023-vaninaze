@@ -6,10 +6,12 @@ public class Cadeteria
     private string telefono;
     private List<Cadete> ListaCadete = new List<Cadete>();
 
-    public Cadeteria(){
+    public Cadeteria()
+    {
 
     }
-    public Cadeteria(string nomb, string tel){
+    public Cadeteria(string nomb = "", string tel = "")
+    {
         this.nombre = nomb;
         this.telefono = tel;
     }
@@ -54,37 +56,39 @@ public class Cadeteria
         }
     }
     //Carga todas las cadeterias, selecciono una y cargo sus cadetes
-    public void cargarCadeteria(){
+    public void cargarCadeteria()
+    {
         string nombreArch = @"C:\tl2-tp1-2023-vaninaze\Cadeteria.csv";
         StreamReader archivo = new(nombreArch);
         string? linea;
         List<Cadeteria> listaCadeterias = new();
-        while((linea = archivo.ReadLine()) != null){
+        while ((linea = archivo.ReadLine()) != null)
+        {
             string[] fila = linea.Split(",").ToArray();
             string nomb = fila[0];
             string tel = fila[1];
-            Cadeteria cadeteria = new Cadeteria(nomb,tel);
+            Cadeteria cadeteria = new Cadeteria(nomb, tel);
             listaCadeterias.Add(cadeteria);
         }
 
         //muestro las cadeterias
         Console.WriteLine("-- Cadeterias --");
-        int i=0;
+        int i = 0;
         foreach (Cadeteria cad in listaCadeterias)
         {
-            Console.WriteLine(i+"- "+"Cadeteria: "+ cad.nombre);
+            Console.WriteLine(i + "- " + "Cadeteria: " + cad.nombre);
             i++;
         }
         Console.WriteLine("Seleccione una Cadeteria");
         int opcion;
-        int.TryParse(Console.ReadLine(),out opcion);
+        int.TryParse(Console.ReadLine(), out opcion);
 
         //Guardo la cedeteria seleccionada
         /*Cadeteria cadeteriaSelec = new Cadeteria();
         cadeteriaSelec = listaCadeterias[opcion];*/
         this.nombre = listaCadeterias[opcion].nombre;
         this.telefono = listaCadeterias[opcion].telefono;
-        Console.WriteLine("Cadeteria seleccionada: "+opcion);
+        Console.WriteLine("Cadeteria seleccionada: " + opcion);
         string archCadetes = @"C:\tl2-tp1-2023-vaninaze\Cadetes.csv";
         StreamReader archivo2 = new(archCadetes);
         archivo2.ReadLine(); // Leo la primera línea y la descarto porque es el encabezado
@@ -99,13 +103,15 @@ public class Cadeteria
         }
     }
 
-    public void InformeCad(){
-        foreach(Cadete cad in ListaCadete){
-            float monto = cad.JornalACobrar();
+    public void InformeCad()
+    {
+        Informe informe = new();
+        foreach (Cadete cad in ListaCadete)
+        {
+            float jonal = cad.JornalACobrar();
             int envios = cad.CantEnvios();
-            Informe informe = new();
-            informe.CargarInforme(monto, envios);
+            informe.CargarInforme(cad.Id, monto, envios);
         }
-        informe.MostrarInforme();
+        informe.mostrarInforme();
     }
 }

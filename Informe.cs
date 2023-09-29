@@ -1,23 +1,27 @@
 using EspacioPedido;
 namespace EspacioInforme;
-public class Informe{
-    float montoCadete;
-    int cantEnviosCadete;
+public class Informe
+{
     float montoTotalPedidos;
     int cantEnviosPromedio;
-    List<Informe> listaInforme = new();
-    public Informe(){
-        montoTotalPedidos = 0;
-        cantEnviosPromedio = 0;
+    public Informe()
+    {
+        this.montoTotalPedidos = 0;
+        this.cantEnviosPromedio = 0;
     }
-    public void CargarInforme(float monto, int envios){
-        montoCadete = monto;
-        cantEnviosCadete = envios;
-        montoTotalPedidos = +monto;
-        cantEnviosPromedio = +envios;
-    
-    }
-    public void MostrarInforme(){
+    public void CargarInforme(int idCad, float jornalACobrar, int envios)
+    {
 
+        montoTotalPedidos = +jornalACobrar;
+        cantEnviosPromedio = +envios;
+        Console.Write("ID Cadete: " + idCad);
+        Console.WriteLine("Monto a cobrar: " + jornalACobrar);
+        Console.WriteLine("Cant de envios: " + envios);
+
+    }
+    public void mostrarInforme()
+    {
+        Console.WriteLine("Monto total de los pedidos: " + montoTotalPedidos);
+        Console.WriteLine("Cantidad promedio de envios por cadete: " + cantEnviosPromedio);
     }
 }
