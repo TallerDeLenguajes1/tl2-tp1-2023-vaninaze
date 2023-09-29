@@ -9,13 +9,13 @@ public class Informe
         this.montoTotalPedidos = 0;
         this.cantEnviosPromedio = 0;
     }
-    public void CargarInforme(int idCad, float jornalACobrar, int envios)
+    public void CargarInforme(int idCad, float monto, int envios)
     {
 
-        montoTotalPedidos = +jornalACobrar;
+        montoTotalPedidos = +monto;
         cantEnviosPromedio = +envios;
         Console.Write("ID Cadete: " + idCad);
-        Console.WriteLine("Monto a cobrar: " + jornalACobrar);
+        Console.WriteLine("Monto a cobrar: " + monto);
         Console.WriteLine("Cant de envios: " + envios);
 
     }
