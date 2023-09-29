@@ -108,7 +108,7 @@ public class Cadeteria
         Informe informe = new();
         foreach (Cadete cad in ListaCadete)
         {
-            float jonal = cad.JornalACobrar();
+            float monto = cad.JornalACobrar();
             int envios = cad.CantEnvios();
             informe.CargarInforme(cad.Id, monto, envios);
         }
