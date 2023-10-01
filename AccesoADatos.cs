@@ -8,7 +8,8 @@ public abstract class AccesoADatos{
         foreach (Cadeteria cad in listaCad)
         {
             Console.WriteLine("-- CADETERIA: "+ i);
-            cad.MostrarCadeteria();
+            Console.WriteLine("Nombre: "+ cad.getNombre());
+            Console.WriteLine("Telefono: "+ cad.getTelefono());
             i++;
         }
     }
@@ -20,9 +21,10 @@ public abstract class AccesoADatos{
         //Guardo la cedeteria seleccionada
         /*Cadeteria cadeteriaSelec = new Cadeteria();
         cadeteriaSelec = listaCadeterias[opcion];*/
-        Cadeteria cadeteria = listaCadeteria[opcion];
+        Cadeteria cadeteria = listaCadeteria[opcion-1];
         Console.WriteLine("Cadeteria seleccionada: " + opcion);
-        cadeteria.MostrarCadeteria();
+        Console.WriteLine("Nombre: "+ cadeteria.getNombre());
+        Console.WriteLine("Telefono: "+ cadeteria.getTelefono());
         return cadeteria;
     }
 }

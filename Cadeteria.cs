@@ -16,6 +16,12 @@ public class Cadeteria
         this.nombre = nomb;
         this.telefono = tel;
     }
+    public int getCantCadetes(){
+        return ListaCadete.Count();
+    }
+    public int getCantPedidos(){
+        return ListaPedidos.Count();
+    }
     public void crearPedido(int num, string obs, string nomb, string dir, string telef, string datosRef){
         Pedido ped = new Pedido(num, obs, nomb, dir, telef, datosRef);
         ListaPedidos.Add(ped);
@@ -27,24 +33,18 @@ public class Cadeteria
     public void agregarCadete(Cadete cad){
         ListaCadete.Add(cad);
     }
-    public void MostrarCadeteria(){
-        Console.WriteLine("Nombre: "+ this.nombre);
-        Console.WriteLine("Telefono: "+ this.telefono);
+    public string getNombre(){
+        return this.nombre;
     }
-    public void MostrarCadetes()
+    public string getTelefono(){
+        return this.telefono;
+    }
+    public Cadete MostrarCadete(int indice)
     {
-        Console.WriteLine("-- CADETES --");
-        foreach (Cadete cad in ListaCadete)
-        {
-            cad.MostrarCadete();
-        }
+        return this.ListaCadete[indice];
     }
-    public void MostrarPedidos(){
-        Console.WriteLine("--- PEDIDOS --- ");
-        foreach (var ped in ListaPedidos)
-        {
-            ped.MostrarPedido();
-        }
+    public Pedido MostrarPedido(int indice){
+        return this.ListaPedidos[indice];
     }
     public float JornalACobrar(int idCad){
         float monto;

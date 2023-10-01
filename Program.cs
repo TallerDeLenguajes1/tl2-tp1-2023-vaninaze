@@ -35,7 +35,9 @@ switch (opcion)
         ReasignarPedido(cadeteria);
         break;
     case 3:
-        cadeteria.MostrarCadetes();
+        Console.WriteLine("-- CADETERIA: ");
+        Console.WriteLine("Nombre: "+ cadeteria.getNombre());
+        Console.WriteLine("Telefono: "+ cadeteria.getTelefono());
         Console.WriteLine("_______Seleccione un cadete: ");
         int idCad;
         if (int.TryParse(Console.ReadLine(), out idCad))
@@ -70,12 +72,20 @@ static int Menu()
 }
 void AsignarCadeteAPedido(Cadeteria cadeteria)
 {
-    cadeteria.MostrarPedidos();
+    int cantPed = cadeteria.getCantPedidos(); //mostrar pedidos
+    for(int i=0; i < cantPed; i++){
+        Pedido pedido = cadeteria.MostrarPedido(i);
+        pedido.MostrarPedido();
+    }
     Console.WriteLine("_______Seleccione un pedido para asignar a un cadete: ");
     int idPed;
     if (int.TryParse(Console.ReadLine(), out idPed))
     {
-        cadeteria.MostrarCadetes();
+        int cantCad = cadeteria.getCantCadetes(); //mostrar cadetes
+        for(int i=0; i < cantCad; i++ ){ 
+            Cadete cadete = cadeteria.MostrarCadete(i);
+            cadete.MostrarCadete();
+        }
         Console.WriteLine("_______Seleccione un cadete: ");
         int idCad;
         if (int.TryParse(Console.ReadLine(), out idCad))
@@ -86,12 +96,20 @@ void AsignarCadeteAPedido(Cadeteria cadeteria)
 }
 static void ReasignarPedido(Cadeteria cadeteria)
 {
-    cadeteria.MostrarPedidos();
+    int cantPed = cadeteria.getCantPedidos();
+    for(int i=0; i < cantPed; i++){
+        Pedido pedido = cadeteria.MostrarPedido(i);
+        pedido.MostrarPedido();
+    }
     Console.WriteLine("_______Seleccione un pedido para REasignar a un cadete: ");
     int idPed;
     if (int.TryParse(Console.ReadLine(), out idPed))
     {
-        cadeteria.MostrarCadetes();
+        int cantCad = cadeteria.getCantCadetes(); //mostrar cadetes
+        for(int i=0; i < cantCad; i++ ){ 
+            Cadete cadete = cadeteria.MostrarCadete(i);
+            cadete.MostrarCadete();
+        }
         Console.WriteLine("_______Seleccione un cadete: ");
         int idCad;
         if (int.TryParse(Console.ReadLine(), out idCad))
