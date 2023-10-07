@@ -3,7 +3,7 @@ using EspacioPedido;
 //Carga todas las cadeterias, selecciono una y cargo sus cadetes
 //CADETERIA CSV
 public class AccesoCSV: AccesoADatos{
-    public Cadeteria cargarCadeteriaCSV()
+    public override Cadeteria cargarCadeteria()
     {
         string nombreArch = @"C:\tl2-tp2-2023-vaninaze\Cadeteria.csv";
         StreamReader archivo = new(nombreArch);

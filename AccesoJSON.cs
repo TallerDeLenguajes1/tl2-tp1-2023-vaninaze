@@ -3,7 +3,7 @@ using EspacioPedido;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 public class AccesoJSON: AccesoADatos{
-    public Cadeteria cargarCadeteriaJSON(){
+    public override Cadeteria cargarCadeteria(){
         string archivo = @"C:\tl2-tp2-2023-vaninaze\Cadeteria.json";
         string jsonString = File.ReadAllText(archivo);
         List<Cadeteria>? listaCadeterias = JsonSerializer.Deserialize<List<Cadeteria>>(jsonString);

@@ -11,11 +11,11 @@ if(int.TryParse(Console.ReadLine(), out opcion)){
     {
         case 1:
             AccesoCSV csv = new();
-            cadeteria = csv.cargarCadeteriaCSV();
+            cadeteria = csv.cargarCadeteria();
             break;
         case 2:
             AccesoJSON json = new();
-            cadeteria = json.cargarCadeteriaJSON();
+            cadeteria = json.cargarCadeteria();
             break;
     }
 }
