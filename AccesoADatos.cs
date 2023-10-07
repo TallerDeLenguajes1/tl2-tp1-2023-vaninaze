@@ -1,6 +1,9 @@
 namespace EspacioDatos;
 using EspacioPedido;
 public abstract class AccesoADatos{
+    public virtual Cadeteria cargarCadeteria(){
+        return null;
+    }
     public void mostrarCadeterias(List<Cadeteria> listaCad){
        //muestro las cadeterias
         Console.WriteLine("-- Cadeterias --");
