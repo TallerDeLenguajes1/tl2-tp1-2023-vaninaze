@@ -1,24 +1,24 @@
 [
     {
-      "ID": 1,
+      "Id": 1,
       "Nombre": "Lucia",
       "Direccion": "Sarmiento 234",
       "Telefono": "3813567892"
     },
     {
-      "ID": 2,
+      "Id": 2,
       "Nombre": "Paco",
       "Direccion": "San Juan 231",
       "Telefono": "3816732983"
     },
     {
-      "ID": 3,
+      "Id": 3,
       "Nombre": "Mauro",
       "Direccion": "Av. Alem 234",
       "Telefono": "3818932456"
     },
     {
-      "ID": 4,
+      "Id": 4,
       "Nombre": "Azul",
       "Direccion": "Mendoza 423",
       "Telefono": "3819843245"
